@@ -1,0 +1,24 @@
+<!--pages/business/logOn.wxml-->
+<view class="container">
+  <view class="page-section">
+    <view class="weui-cells__title" >输入用户名</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input"  maxlength="10" bindinput="bindNickname" placeholder="~"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title" wx:if="{{password}}===''">输入密码：</view>
+    <view class="weui-cells__title" wx:else>输入密码：不能为空！</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" password type="text" bindinput="bindPassword" maxlength="15" placeholder="最多15位字符" />
+      </view>
+    </view>
+  </view>
+  <view>
+    <button bindtap="CallBack">提交</button>
+  </view>
+</view>
+
